@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Flowbite JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.1/flowbite.min.js"></script>
+    <link rel="stylesheet" href="src/style.css">
+    <title> Al jamiyatul Islamiya </title>
+  </head>
+  <body>
+
+    <header class="p-2">
+      <div class="bg-[#986CDA] text-center lg:flex lg:justify-between lg:items-center lg:px-28">
+        <p class="text-center p-3"><i class="fa-solid fa-location-dot"></i> আল জামিয়াতুল ইসলামিয়া ইসলামপুর । প্রতিষ্ঠান কোড : No code </p>
+        <p> <i title="Login" class="fa-solid fa-arrow-right-to-bracket cursor-pointer"></i> </p>
+      </div>
+
+      <div class="lg:px-28">
+        <img src="public/images/banner.png" alt="">
+      </div>
+    </header>
+
+
+    <!-- Navigation Menu Bar Start -->
+    <nav class="bg-white border border-gray-200 dark:bg-gray-900 dark:border-gray-700 w-full z-40 sticky top-0 left-0">
+      <div class="max-w-screen-xl flex flex-wrap items-center lg:justify-center mx-auto p-4">
+        <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+          <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li>
+              <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent hover:text-red-600 transition-colors" aria-current="page"> হোম </a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"> ভর্তির আবেদন </a>
+            </li>
+
+            <li>
+              <button id="dropdownNavbarNoticeLink" data-dropdown-toggle="dropdownNavbarNotice" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"> বিজ্ঞপ্তি <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbarNotice" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                  <li> <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"> ক্লাস রুটিন </a> </li>
+                  <li> <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"> পরীক্ষার ফি </a> </li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <button id="dropdownNavbarStudentLink" data-dropdown-toggle="dropdownNavbarStudent" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"> শিক্ষার্থী <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                </svg>
+              </button>
+                <!-- Dropdown menu -->
+                <div id="dropdownNavbarStudent" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li> <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"> বালক শাখা </a> </li>
+                    <li> <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"> বালিকা শাখা </a> </li>
+                  </ul>
+                </div>
+            </li>
+
+            <li>
+              <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"> যোগাযোগ </a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"> রেজাল্ট </a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"> পরীক্ষার রুটিন </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navigation Menu Bar Start -->
+
+
+    <main class="p-3">
+
+
+
+
+
+      
+      <!-------------------------------------------------------------------------------------------------------------------------
+                                                          Hero Section Start
+      --------------------------------------------------------------------------------------------------------------------------->
+      <div class="lg:flex">
+        <!--------------------------------------------------- Carousel Start Here ------------------------------------------------->
+        <div id="default-carousel" class="relative w-full lg:w-8/12 lg:mr-3" data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="public/images/first.jpg" class="w-full h-full object-cover" alt="...">
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="public/images/second.jpg" class="w-full h-full object-cover" alt="...">
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="public/images/third.jpeg" class="w-full h-full object-cover" alt="...">
+                </div>
+                <!-- Item 4 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="public/images/first.jpg" class="w-full h-full object-cover" alt="...">
+                </div>
+                <!-- Item 5 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="public/images/second.jpg" class="w-full h-full object-cover" alt="...">
+                </div>
+            </div>
+            <!-- Slider indicators -->
+            <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+            </div>
+            <!-- Slider controls -->
+            <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+        </div>
+        <!--------------------------------------------------- Carousel End Here ------------------------------------------------->
+
+        <!---------------------------------------------- Principles Section Start ----------------------------------------------->
+        <div class="my-3 lg:w-4/12">
+          <p class="text-center font-[200] text-xl text-white p-1 border bg-blue-700 mb-3"> PRINCIPLE'S MESSAGE </p>
+          <div class="bg-[#F8F9FA] lg:p-1">
+            <div class="flex justify-center">
+              <img src="public/images/principle.jpg" class="w-[150px] h-[160px] my-4 align-super border border-4 border-blue-400" alt="Principle's image">
+            </div>
+
+            <div class="px-8 text-center">
+              <p> الحمد لله، والصلاة والسلام على رسول الله وعلى آله وصحبه ومن والاه، أما بعد মহান আল্লাহর অশেষ মেহেরবানিতে আল জামিআতুল ইসলামিয়া (ইসলামপুর মাদরাসা ও এতিমখানা)-এর পথচলার দীর্ঘ ছয় যুগেরও অধিক সময় অতিবাহিত... </p>
+              
+              <!-- Modal toggle -->
+              <button data-modal-target="default-modal" data-modal-toggle="default-modal" class="block my-4 mx-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+                Read More 
+              </button>
+
+              <!-- Main modal Start -->
+              <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                  <div class="relative p-4 w-full max-w-2xl max-h-full">
+                      <!-- Modal content -->
+                      <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
+                          <!-- Modal header -->
+                          <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
+                              <h3 class="text-xl font-semibold text-gray-900 dark:text-white"> Principle's Message </h3>
+                              <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal">
+                                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                  </svg>
+                                  <span class="sr-only">Close modal</span>
+                              </button>
+                          </div>
+                          <!-- Modal body -->
+                          <div class="p-4 md:p-5 space-y-4">
+                              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                                  الحمد لله، والصلاة والسلام على رسول الله وعلى آله وصحبه ومن والاه، أما بعد মহান আল্লাহর অশেষ মেহেরবানিতে আল জামিআতুল ইসলামিয়া (ইসলামপুর মাদরাসা ও এতিমখানা)-এর পথচলার দীর্ঘ ছয় যুগেরও অধিক সময় অতিবাহিত হয়েছে, আলহামদুলিল্লাহ। তবে এর উন্নতির ধারা শুরু হয়েছে দ্বিতীয় প্রতিষ্ঠাতা (মরহুম মুহতামিম সাহেব) আব্বাজান মৌলবি আবুল খায়ের মুহাম্মদ ইবরাহীম (রহ.) এবং উন্নয়নের রূপকার (মরহুম নাজেম সাহেব) ছোটভাই হাফেজ মাওলানা ইউসুফ ইবরাহীম (রহ.)-এর হাত ধরে। আমরা বর্তমানে তাঁদের শুরু করে যাওয়া সেই উন্নতির ধারাবাহিকতা অগ্রসর করার চেষ্টা করছি মাত্র। এ সুদীর্ঘ পথপরিক্রমায় প্রতিষ্ঠানটির শিক্ষাকার্যক্রম ও যাবতীয় বিষয়াদি বেশ সুচারুরূপে পরিচালিত হচ্ছে। তালিম-তাদরিস বা পড়ালেখার পাশাপাশি শিক্ষার্থীদের তরবিয়ত তথা চারিত্রিক গঠন, আত্মন্নোয়ন ও আদর্শ তালিবুল ইলমরূপে গড়ে তোলার জন্য সর্বদা নানান উদ্যোগ গ্রহণ করা হয়ে থাকে। সেগুলির তদারকির জন্য সার্বক্ষণিক মেহনতি আসাতিজায়ে কেরামের বিশেষ নেগরানি রয়েছে। পাশাপাশি জামিআর ভর্তি সংশ্লিষ্ট নিয়মকানুন, তালিমাত-দারুল ইকামা-মাতবাখ ও এতিমখানা সংশ্লিষ্ট নীতিমালা, দাতব্য চিকিৎসালয় ও তরবিয়ত সংশ্লিষ্ট নিয়মনীতিসহ ছাত্রের দৈনিক, মাসিক ও বার্ষিক পড়ালেখা, পরীক্ষা, ছুটি-অনুপস্থিতি ও অন্যান্য বিষয় নিয়ন্ত্রণে একটি তথ্য বই প্রস্তুত করার উদ্যোগ গ্রহণ করা হয়েছে। জামিআর বর্তমান শিক্ষাপরিচালক (নাজেমে তালিমাত)-এর তত্ত¡াবধানে সংশ্লিষ্ট দায়িত্বশীল উস্তাদ মহোদয় অক্লান্ত পরিশ্রম করে বইটি ছাত্রদের হাতে তুলে দেওয়ার জন্য চূড়ান্ত করেছেন। এতে ছাত্রের অঙ্গীকারনামাসহ জামিআ প্রতিষ্ঠার লক্ষ্য-উদ্দেশ্য, সংক্ষিপ্ত পরিচিতি এবং সকাল-সন্ধ্যার মাসনুন দোয়াসমূহের সন্নিবেশ তথ্য বইটির সৌন্দর্য বৃদ্ধি করেছে। রাব্বুল আলামিনের দরবারে ফরিয়াদ, বইটি তৈরির কাঙ্খিত উদ্দেশ্য অর্জনে আমাদেরকে যেনো কামিয়াবি দান করেন। জামিআর প্রতিটি ছাত্রকে এর নির্দেশনা মোতাবেক ছাত্রজীবন গঠন করে জীবনকে সর্বাঙ্গীন সুন্দর ও সাফল্যমন্ডিত করার তৌফিক দান করেন। বইটি তৈরিতে যে যেভাবে শ্রম দিয়েছেন, আল্লাহতায়ালা তাঁদের সকলকে আপন শান মোতাবেক উত্তম প্রতিদান দান করেন। আমিন। 
+                              </p>
+                          </div>
+                          <!-- Modal footer -->
+                          <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                              <button data-modal-hide="default-modal" type="button" class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"> Close </button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- Main Modal End -->
+            </div>
+          </div>
+        </div>
+        <!---------------------------------------------- Principles Section End ----------------------------------------------->
+      </div>
+      <!-------------------------------------------------------------------------------------------------------------------------
+                                                          Hero Section End
+      --------------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+      <!-------------------------------------------------------------------------------------------------------------------------
+                                                Menu, Details & Notice Section Start
+      --------------------------------------------------------------------------------------------------------------------------->
+      <div class="lg:flex mb-7">
+
+        <!-- Menu Start-->
+        <div class="lg:w-2/12">
+
+          <p class="text-center font-[200] text-xl text-white p-1 border bg-blue-700"> MENU </p>
+          <ul class="text-center [&>li>a]:block [&>li>a]:bg-amber-400 [&>li>a]:my-2 [&>li>a]:p-2 [&>li>a]:rounded [&>li>a:hover]:bg-black [&>li>a:hover]:text-white [&>li>a]:transition">
+            <li><a href="#"> ভূমিকা </a></li>
+            <li><a href="#"> লক্ষ ও উদ্দেশ্য </a></li>
+            <li><a href="#"> মাদ্রাসা পরিচিতি </a></li>
+            <li><a href="#"> আমাদের বিভাগসমূহ </a></li>
+            <li><a href="#"> ভবিষ্যৎ পরিকল্পনা </a></li>
+            <li><a href="#"> আপনার সন্তানকে আমাদের প্রতিষ্ঠানে কেন দিবেন? </a></li>
+          </ul>
+
+        </div>
+        <!-- Menu End -->
+
+        <!-- Details Start -->
+        <div class="lg:w-6/12 lg:mx-5">
+
+          <p class="text-center font-[200] text-xl text-white p-1 border bg-blue-700 mb-3"> DETAILS </p>
+          <p class="p-2 bg-[#F8F9FA]"> সমস্ত প্রসংশা মহান আল্লাহ তাআলার জন্য, যিনি এই ভ্রান্তির যুগে আমাদেরকে সীরাতে মুস্তাকীমের উপর প্রতিষ্ঠিত রেখেছেন। দরুদ ও সালাম প্রেরণ করছি প্রিয় নবী হযরত মুহাম্মাদ সাল্লাল্লাহু আলাইহি ওয়া সাল্লামের উপর। যিনি তার গোটা জীবন দ্বীন ইসলাম প্রতিষ্ঠা এবং আমাদের নাজাতের জন্য ব্যয় করেছেন। সুশিক্ষাই জাতির মেরুদন্ড। একমাত্র সুশিক্ষায় শিক্ষিত মানুষই পারে আদর্শ সমাজ গঠন করতে। কিন্তু দুঃখজনক হলেও সত্য যে আমাদের প্রচলিত শিক্ষা ব্যবস্থা নানাভাবে বিভিন্ন ধারায় বিভক্ত হয়ে পড়ায় আমরা বঞ্ছিত হচ্ছি সুশিক্ষা থেকে আর আধুনিক শিক্ষা ব্যবস্থায় কুরআন ও হাদীসের শিক্ষা না থাকায় একটি বিশাল জনগোষ্ঠী যেমন নৈতিক উন্নতি, মানসিক প্রশান্তি এবং পরলৌকিক মুক্তি থেকে বঞ্ছিত হচ্ছে। ঠিক তেমনি কুরআন-হাদীস শিক্ষা পদ্ধতি অর্থাৎ, প্রচলিত মাদরাসা শিক্ষা ব্যবস্থায় আধুনিক ও সময়োপযোগী শিক্ষা না থাকায় ব্যর্থ হচ্ছে পার্থিব উন্নতি সাধন। ফলে উভয় শিক্ষায় শিক্ষিত জনগোষ্ঠীর মধ্যে তৈরী হচ্ছে অপূর্ণতা ও দূর্বলতা। যা শান্তিময় সমাজ ও আদর্শ জাতি গঠনের অন্যতম প্রতিবন্ধকতা। অতএব, বর্তমানে এমন শিক্ষা পদ্ধতি অপরিহার্য, যা ইহকালের সফলতার সাথে সাথে আল্লাহ ও তাঁর রাসূল সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের সন্তুষ্টি অর্জন সুনিশ্চিত করবে। এই চিন্তা-চেতনাকে সামনে রেখেই দারুল উলূম দেওবন্দের শিক্ষা পদ্ধতির সঙ্গে আধুনিক সময়োপযোগী জ্ঞান-বিজ্ঞান ও কারিগরি প্রশিক্ষণের একটি বাস্তবমুখী প্রতিষ্ঠান তৈরির লক্ষ্যেই আল জামিআতুল ইসলামিয়া দারুল উলূম তারাইল ফুকরা মাদরাসার সূচনা।
+          </p>
+
+        </div>
+        <!-- Details End -->
+
+        <!-- Notice Start -->
+        <div class="lg:w-4/12">
+
+          <p class="text-center font-[200] text-xl text-white p-1 border bg-blue-700 mb-3"> EDUCATION SECRETARY'S STATEMENT </p>
+          <div class="bg-amber-300 h-96">
+            <img class="w-full h-40 border" src="#" alt="Nocite image">
+            <P> ডাটাবেজে কোনো নোটিশ পাওয়া যায়নি </P>
+          </div>
+        </div>
+        <!-- Notice End -->
+
+      </div>
+      <!-------------------------------------------------------------------------------------------------------------------------
+                                                Menu, Details & Notice Section End
+      --------------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+      <!-------------------------------------------------------------------------------------------------------------------------
+                                          Facebook, Location & Notice Board Section Start
+      --------------------------------------------------------------------------------------------------------------------------->
+      <div class="lg:flex mb-7">
+        <!-- Facebook Section Start -->
+        <div class="lg:w-4/12">
+          <p class="text-center font-[200] text-xl text-white border p-0.5 bg-green-600 mb-4"> ANOTHER WEBSITE </p>
+
+          <iframe class="w-full h-[360px]" src="https://www.ahmadsit.com/?fbclid=IwY2xjawMZZQBleHRuA2FlbQIxMABicmlkETFNOHVzaGM2REZFdWlRU1ZKAR4t19sZUWTaLR3Mr3KHOJJoBwYlaXZKRhStp9MKgnEsVIqPtWeNwQWkQ3L1sQ_aem_iW3R8u5rDjbe7tlfsfJLQw" frameborder="0"></iframe>
+
+
+          <!-- <div id="fb-root"></div>
+          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0"></script>
+
+          <div class="fb-page"
+              data-href="https://www.facebook.com/AhmadsEducation/"
+              data-tabs="timeline"
+              data-width="w-full"
+              data-height="700"
+              data-small-header="false"
+              data-adapt-container-width="true"
+              data-hide-cover="false"
+              data-show-facepile="true">
+              <blockquote cite="https://www.facebook.com/AhmadsEducation/" class="fb-xfbml-parse-ignore">
+                  <a href="https://www.facebook.com/AhmadsEducation/">Ahmads Education</a>
+              </blockquote>
+          </div> -->
+
+
+          <!-- <div id="fb-root" class="rounded-xl"></div>
+            <script async defer crossorigin="anonymous" 
+              src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0" nonce="xyz">
+            </script>
+
+            <div class="fb-page rounded-xl" 
+                data-href="https://www.facebook.com/facebook" 
+                data-tabs="timeline" 
+                data-adapt-container-width="true"
+                data-height="360" 
+                data-small-header="false" 
+                data-adapt-container-width="true" 
+                data-hide-cover="false" 
+                data-show-facepile="true">
+              <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore">
+                <a href="https://www.facebook.com/facebook">Facebook</a>
+              </blockquote>
+            </div> -->
+            <!-- <iframe src="https://www.facebook.com/AhmadsEducation/" frameborder="0"></iframe> -->
+
+        </div>
+        <!-- Facebook Section End -->
+
+         <!-- Location Section Start -->
+        <div class="lg:w-4/12 lg:mx-5">
+          <p class="text-center font-[200] text-xl text-white border p-0.5 bg-green-600 mb-4"> LOCATION </p>
+          <iframe class="rounded-xl" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.0905007215306!2d90.47117617409886!3d23.708461990387523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b70054decb79%3A0x5cd9f2b094411fd2!2sAhmad&#39;s%20Education!5e0!3m2!1sen!2sbd!4v1756011590698!5m2!1sen!2sbd" width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <!-- Location Section End -->
+
+         <!-- Notice Board Section Start -->
+        <div class="lg:w-4/12">
+          <p class="text-center font-[200] text-xl text-white border p-0.5 bg-green-600 mb-4"> NOTICE BOARD </p>
+
+          <ul class="[&>li]:mb-4 px-4 h-[360px] rounded-xl bg-[#F8F9FA]">
+            <li> <i class="fa-solid fa-hand-point-right"></i> আলহামদুলিল্লাহ, সকাল ৯টা থেকে আসর পর্যন্ত দাপ্তরিক সকল কার্যক্রম চালু আছে। </li>
+            <li> <i class="fa-solid fa-hand-point-right"></i> নূরানী কিন্ডার গার্টেন বিভাগে ১লা জানুয়ারী ২০২৫ ই. থেকে পুর্ণরূপে ক্লাস শুরু হয়েছে। এখনও যারা ভর্তি করাননি, সিলেবাস বৃদ্ধি হবার আগেই ভর্তি করিয়ে দিন। </li>
+            <li> <i class="fa-solid fa-hand-point-right"></i> সকল বিভাগের রেজাল্ট প্রদান করা হয়েছে। আপনার সন্তানের রেজাল্টের ব্যাপারে গুরুত্ব দিয়ে খোঁজ নিন। </li>
+            <li> <i class="fa-solid fa-hand-point-right"></i> আপনার সন্তানের দীন-ঈমান সংরক্ষণের নৈতিক দায়িত্ব আপনার। সুতরাং, তাকে দীনদার ও আলোকিত মানুষ বানানোর জন্য কওমী মাদরাসায় ভর্তি করুন। </li>
+          </ul>
+
+        </div>
+        <!-- Notice Board Section End -->
+      </div>
+      <!-------------------------------------------------------------------------------------------------------------------------
+                                          Facebook, Google Map & Notice Board Section End
+      --------------------------------------------------------------------------------------------------------------------------->
+
+    </main>
+
+    <footer class="bg-amber-300 px-3 py-10">
+      <div>
+        <ul class="flex justify-center [&>li>a]:text-fuchsia-500 [&>li>a]:inline-block [&>li>a]:mx-1 [&>li>a]:transition [&>li>a:hover]:underline [&>li>a:hover]:font-semibold [&>li>a:hover]:text-fuchsia-700">
+          <li> <a href="#"> About </a> </li>
+          <li> <a href="#"> Our People </a> </li>
+          <li> <a href="#"> Faq </a> </li>
+          <li> <a href="#"> Blog </a> </li>
+          <li> <a href="#"> WhatsApp </a> </li>
+        </ul>
+      </div>
+      <div class="mt-2 text-center">
+        <p> Copyright &copy; Ahmad's Education IT </p>
+        <p> (Mahbub Hasan Belal) </p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+
